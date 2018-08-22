@@ -37,14 +37,14 @@ while true; do
         if [ $go -eq 5 ]; then
                 if [ $delay -eq 0 ]; then
                         replay=$[$(date +%s)+61]
-                        echo "e' ora di andare"
+                        echo "ok, let's go"
                         delay=1
                 fi
                 if [ $(date +%s) -gt $replay ]; then
                         delay=0
                 fi
         else
-                echo "niente da fare: quando: $m_when $h_when $dom_when $mon_when $dow_when . adesso: $m_now $h_now $dom_now $mon_now $dow_now"
+                echo "nothing to do: when: $m_when $h_when $dom_when $mon_when $dow_when . now: $m_now $h_now $dom_now $mon_now $dow_now"
         fi
         sleep 5
 done
